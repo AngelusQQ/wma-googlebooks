@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/AngelusQQ/wma-googlebooks/issues"
   },
-  "homepage": "https://github.com/AngelusQQ/wma-googlebooks#readme"
+  "homepage": "https://github.com/AngelusQQ/wma-googlebooks#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.8"
+  }
 }
