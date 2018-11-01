@@ -1,0 +1,19 @@
+{
+  "name": "wma-googlebooks",
+  "version": "1.0.0",
+  "description": "Google Books Search",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelusQQ/wma-googlebooks.git"
+  },
+  "author": "AngelusQQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelusQQ/wma-googlebooks/issues"
+  },
+  "homepage": "https://github.com/AngelusQQ/wma-googlebooks#readme"
+}
