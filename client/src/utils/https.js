@@ -35,6 +35,8 @@ export default {
       const request = https.request(postOptions, (response) => {
         if(response.statusCode !== 200) {
           reject(new Error(response.statusCode));
+        } else {
+          resolve("FISH")
         }
       });
       request.write(postData);
