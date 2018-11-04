@@ -33,15 +33,11 @@ export default {
   saveBook: () => {
     return new Promise((resolve, reject) => {
       const request = https.request(postOptions, (response) => {
-        if(response.statusCode !== 200) {
-          reject(new Error(response.statusCode));
-        } else {
-          resolve("FISH")
-        }
       });
       request.write(postData);
       request.on('error', (err) => reject(err));
       request.end();
+      resolve("FISH");
     });
   }
 }
