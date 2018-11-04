@@ -14,10 +14,11 @@ class Books extends Component {
   loadBooks = () => {
     // API.getBooks('/api/books')
     API.saveBook()
-      .then(function(response) {
-        console.log(response)
+      .then((response) => {
+        console.log("first response");
+        console.log(response);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log("jenna"));
   };
 
   render() {
