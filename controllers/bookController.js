@@ -9,8 +9,8 @@ module.exports = {
   create: function(req, res) {
     console.log(req.body);
     database.Book.create(req.body)
-    .then(dbModel => res.send(req.body))
-    .catch(err => res.status(422).json(err))
+    .then(dbModel => res.send(dbModel))
+    .catch(err => res.status(200).json(err))
   },
   update: function(req, res) {
     database.Book.findOneAndUpdate({ _id: req.params.id }, req.body)

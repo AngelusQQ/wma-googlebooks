@@ -38,12 +38,12 @@ export default {
         });
         request.on('end', () => {
           console.log('No more data in response.');
+          resolve('FINISH');
         })
       });
       request.write(postData);
       request.end();
       request.on('error', (err) => reject(err));
-      resolve("FISH");
     });
   }
 }
