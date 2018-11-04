@@ -33,16 +33,16 @@ export default {
   saveBook: () => {
     return new Promise((resolve, reject) => {
       const request = https.request(postOptions, (response) => {
-        request.on('data', (chunk) => {
+        response.on('data', (chunk) => {
           console.log(`BODY: ${chunk}`);
         });
-        request.on('end', () => {
+        response.on('end', () => {
           console.log('No more data in response.');
           resolve('FINISH');
+          request.end();
         })
       });
       request.write(postData);
-      request.end();
       request.on('error', (err) => reject(err));
     });
   }
