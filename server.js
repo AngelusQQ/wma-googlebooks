@@ -8,10 +8,6 @@ const PORT = process.env.PORT || 3001;
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json());
 
-// ------------------- DEVELOPMENT (DELETE FOR PRODUCTION) ------------------------
-// server.use(express.static('client/build'));
-// --------------------------------------------------------------------------------
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   server.use(express.static("client/build"));

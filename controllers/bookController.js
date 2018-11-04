@@ -7,8 +7,9 @@ module.exports = {
     .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log(req.body);
     database.Book.create(req.body)
-    .then(dbModel => res.json(dbModel))
+    .then(dbModel => res.send(req.body))
     .catch(err => res.status(422).json(err))
   },
   update: function(req, res) {
