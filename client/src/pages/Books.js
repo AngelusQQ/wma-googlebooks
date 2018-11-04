@@ -14,7 +14,9 @@ class Books extends Component {
   loadBooks = () => {
     // API.getBooks('/api/books')
     API.saveBook()
-      .then(console.log("Funemployed"))
+      .then(function(response) {
+        console.log(response)
+      })
       .catch(err => console.log(err));
   };
 
