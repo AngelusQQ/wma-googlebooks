@@ -5,13 +5,15 @@ const postOptions = {
   hostname: "wma-googlebooks.herokuapp.com",
   path: "/api/books",
   method: "POST",
-  json: true
+  headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+  },
 }
 
-const postData = querystring.stringify({
-  "title": "Catcher in the Rye",
-  "authors": "J. D. Salinger"
-})
+const postData = {
+  title: "Catcher in the Rye",
+  authors: "J. D. Salinger"
+}
 
 export default {
   getBooks: (url) => {
