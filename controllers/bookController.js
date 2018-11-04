@@ -10,7 +10,7 @@ module.exports = {
     console.log(req);
     database.Book.create(req.body)
     .then(dbModel => res.send(req.body))
-    .catch(err => res.status(422).json(err))
+    .catch(err => res.status(400).json(err))
   },
   update: function(req, res) {
     database.Book.findOneAndUpdate({ _id: req.params.id }, req.body)
