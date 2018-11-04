@@ -10,10 +10,10 @@ const postOptions = {
   }
 }
 
-const postData = {
-  title: "Catcher in the Rye",
-  authors: "J. D. Salinger"
-}
+const postData = querystring.stringify({
+  "title": "Catcher in the Rye",
+  "authors": "J. D. Salinger"
+})
 
 export default {
   getBooks: (url) => {
@@ -33,10 +33,16 @@ export default {
   saveBook: () => {
     return new Promise((resolve, reject) => {
       const request = https.request(postOptions, (response) => {
+        request.on('data', (chunk) => {
+          console.log(`BODY: ${chunk}`);
+        });
+        request.on('end', () => {
+          console.log('No more data in response.');
+        })
       });
       request.write(postData);
-      request.on('error', (err) => reject(err));
       request.end();
+      request.on('error', (err) => reject(err));
       resolve("FISH");
     });
   }
