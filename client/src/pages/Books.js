@@ -14,7 +14,7 @@ class Books extends Component {
   loadBooks = () => {
     // API.getBooks('/api/books')
     API.saveBook()
-      .then(res => console.log(res))
+      .then(res => console.log("Bad Wolf"))
       .catch(err => console.log(err));
   };
 
