@@ -2,7 +2,7 @@ import https from "https";
 import querystring from "querystring";
 
 const postOptions = {
-  hostname: "localhost:3001",
+  hostname: "wma-googlebooks.herokuapp.com",
   path: "/api/books",
   method: "POST",
   json: true
