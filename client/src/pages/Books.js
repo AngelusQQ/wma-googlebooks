@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import Result from '../components/Result';
 import API from "../utils/https";
 
 class Books extends Component {
   state = {
-    books: [],
+    books: "TEMP",
     search: ""
   };
 
@@ -37,9 +38,7 @@ class Books extends Component {
     console.log(this.state.search);
     API.searchBooks(this.state.search)
       .then(response => {
-        console.log("GOOGLE");
-        console.log(typeof response);
-        console.log(response);
+        this.setState({books: response.items});
         console.log(response.items);
       })
       .catch((err) => console.log(err));
@@ -52,6 +51,7 @@ class Books extends Component {
           <input value={this.state.search} onChange={this.handleInputChange} name="search"></input>
           <button disabled={!(this.state.search)} onClick={this.submitSearch}></button>
         </form>
+        <Result results={this.state.books}/>
       </div>
     )
   }
