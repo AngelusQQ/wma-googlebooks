@@ -19,7 +19,11 @@ export default {
   //GET REQUEST (Google Search - Books)
   //https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes
   searchBooks: (parameters) => {
-    const query = parameters.split(" ").join("+");
+
+    const query = parameters.includes(" ") ? parameters.trim().split(" ").join("+")
+    : parameters.trim();
+    console.log("SEARCH TERM:", query);
+
     const url = 'https://www.googleapis.com/books/v1/volumes?q=' + query;
     return new Promise((resolve, reject) => {
       const request = https.get(url, (response) => {

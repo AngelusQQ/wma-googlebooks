@@ -39,7 +39,7 @@ class Books extends Component {
       .then(response => {
         console.log("GOOGLE")
         console.log(typeof response)
-        console.log(response)
+        console.log(response.items)
       })
       .catch((err) => console.log(err));
   };
