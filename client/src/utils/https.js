@@ -33,9 +33,8 @@ export default {
   saveBook: () => {
     return new Promise((resolve, reject) => {
       const request = https.request(postOptions, (response) => {
-        let data;
+        let data = '';
         response.on('data', (chunk) => {
-          console.log(`BODY: ${chunk}`);
           data += chunk;
         });
         response.on('end', () => {

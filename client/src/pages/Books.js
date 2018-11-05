@@ -15,7 +15,7 @@ class Books extends Component {
     // API.getBooks('/api/books')
     API.saveBook()
       .then(response => console.log(response))
-      .catch((err) => console.log("jenna"));
+      .catch((err) => console.log(err));
   };
 
   render() {
