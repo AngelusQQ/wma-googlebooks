@@ -45,7 +45,8 @@ class Books extends Component {
       .then(response => {
         this.setState({
           books: response.items,
-          search: ""
+          search: "",
+          searchSize: response.items.length
         });
         console.log(response.items);
       })
