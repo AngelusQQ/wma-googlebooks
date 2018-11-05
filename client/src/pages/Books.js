@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Result from '../components/Result';
-import API from "../utils/https";
+import API from '../utils/https';
+import './Books.css';
 
 class Books extends Component {
   state = {
@@ -52,7 +53,7 @@ class Books extends Component {
       <div>
         <form>
           <input className="searchbar" value={this.state.search} onChange={this.handleInputChange} name="search"></input>
-          <button className="submitButton" disabled={!(this.state.search)} onClick={this.submitSearch}></button>
+          <button className="submitButton" disabled={!(this.state.search)} onClick={this.submitSearch}>Search</button>
         </form>
         <Result results={this.state.books}/>
       </div>
