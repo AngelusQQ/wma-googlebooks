@@ -13,7 +13,10 @@ class Books extends Component {
 
   loadBooks = () => {
     API.getBooks('/api/books')
-      .then(response => console.log(typeof response))
+      .then(response => {
+        console.log(typeof response);
+        console.log(response);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -33,7 +36,11 @@ class Books extends Component {
 
     console.log(this.state.search);
     API.searchBooks(this.state.search)
-      .then(response => console.log(typeof response))
+      .then(response => {
+        console.log("GOOGLE")
+        console.log(typeof response)
+        console.log(response)
+      })
       .catch((err) => console.log(err));
   };
 
