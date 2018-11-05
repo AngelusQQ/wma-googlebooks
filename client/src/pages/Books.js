@@ -38,10 +38,9 @@ class Books extends Component {
     return (
       <div>
         <form>
-          <input value={this.state.search} onChange={this.handleInputChange} name="search">
+          <input value={this.state.search} onChange={this.handleInputChange} name="search"></input>
           <button disabled={!(this.state.search)} onClick={this.submitSearch}></button>
         </form>
-
       </div>
     )
   }
