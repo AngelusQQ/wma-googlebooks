@@ -7,9 +7,9 @@ const Result = props => (
   {props.results !== "TEMP" ?
   props.results.map(volume => (
     <div className="container">
-      <h1>{volume.volumeInfo.title}</h1>
-      <h3>Author: {volume.volumeInfo.authors}</h3>
-      <h3>Description: {volume.volumeInfo.description}</h3>
+      <h1 className="text">{volume.volumeInfo.title}</h1>
+      <h3 className="text">Author: {volume.volumeInfo.authors}</h3>
+      <h3 className="text">Description: {volume.volumeInfo.description}</h3>
     </div>
   )) : <div className="empty-container"></div>}
   </div>
