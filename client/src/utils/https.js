@@ -51,7 +51,7 @@ export default {
   saveBook: (title, authors, description) => {
     const postData = querystring.stringify({
       "title": title || "No Title Provided",
-      "authors": authors || "No Author Provided"
+      "authors": authors || "No Author Provided",
       "description": description || "No Description Provided"
     });
 
