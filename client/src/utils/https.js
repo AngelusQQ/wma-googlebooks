@@ -43,7 +43,7 @@ export default {
       });
       request.write(postData);
       request.end();
-      resolve('SENSITIVE');
+      // resolve('SENSITIVE');
       request.on('error', (err) => reject(err));
     });
   }
