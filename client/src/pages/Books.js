@@ -37,9 +37,10 @@ class Books extends Component {
     console.log(this.state.search);
     API.searchBooks(this.state.search)
       .then(response => {
-        console.log("GOOGLE")
-        console.log(typeof response)
-        console.log(response.items)
+        console.log("GOOGLE");
+        console.log(typeof response);
+        console.log(response);
+        console.log(response.items);
       })
       .catch((err) => console.log(err));
   };

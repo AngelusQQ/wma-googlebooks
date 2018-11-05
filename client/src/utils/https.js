@@ -27,8 +27,11 @@ export default {
     const url = 'https://www.googleapis.com/books/v1/volumes?q=' + query;
     return new Promise((resolve, reject) => {
       const request = https.get(url, (response) => {
+        console.log("RESPONSE CODE", response.statusCode);
         if(response.statusCode >= 200 && response.statusCode < 300) {
-          response.on('data', (chunk) => resolve(chunk));
+          let data = '';
+          response.on('data', (chunk) => data += chunk);
+          response.on('end', resolve(JSON.parse(data)));
         } else {
           reject(new Error(response.statusCode));
         }
