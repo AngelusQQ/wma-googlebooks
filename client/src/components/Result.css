@@ -1,17 +1,22 @@
 .container {
-  margin-top:10%;
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:10%;
+  margin-right:10%;
   margin-bottom:10%;
   border: 1px solid black;
+  width:78
+}
+
+.container-title {
+  margin-left:10%;
+  margin-top:5%;
+  margin-bottom:2%;
 }
 
 .empty-container {
   margin-bottom:10%;
-  margin-left:5%;
-  margin-right:5%;
-  margin-top:10%;
+  margin-left:10%;
+  margin-right:10%;
   border:1px solid black;
   height:70vh;
-  width:80vw;
+  width:78vw;
 }

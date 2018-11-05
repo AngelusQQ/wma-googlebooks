@@ -3,6 +3,7 @@ import "./Result.css";
 
 const Result = props => (
   <div>
+  <div className="container-title">Currently Showing {props.searchSize} Search Results:</div>
   {props.results !== "TEMP" ?
   props.results.map(volume => (
     <div className="container">

@@ -1,8 +1,8 @@
-.searchbar {
-  width: 78vw;
+#searchbar {
+  margin-top:5%;
+  width: 75vw;
   margin-left:10%;
-  margin-right:10%;
 }
 
-.submitButton {
+#submitButton {
 }

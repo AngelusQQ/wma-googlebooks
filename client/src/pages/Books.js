@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import Result from '../components/Result';
-import API from '../utils/https';
 import './Books.css';
+import NavBar from '../components/NavBar';
+import Title from '../components/Title';
+import Result from '../components/Result';
+import titleImage from '../images/title.png';
+import API from '../utils/https';
 
 class Books extends Component {
   state = {
     books: "TEMP",
-    search: ""
+    search: "",
+    searchSize: 0
   };
 
   componentDidMount() {
-    this.loadBooks();
+    // this.loadBooks();
   }
 
   loadBooks = () => {
@@ -51,11 +55,13 @@ class Books extends Component {
   render() {
     return (
       <div>
+        {NavBar()}
+        <Title src={titleImage} />
         <form>
-          <input className="searchbar" value={this.state.search} onChange={this.handleInputChange} name="search"></input>
-          <button className="submitButton" disabled={!(this.state.search)} onClick={this.submitSearch}>Search</button>
+          <input id="searchbar" value={this.state.search} onChange={this.handleInputChange} name="search"></input>
+          <button id="submitButton" disabled={!(this.state.search)} onClick={this.submitSearch}>Search</button>
         </form>
-        <Result results={this.state.books}/>
+        <Result searchSize={this.state.searchSize} results={this.state.books}/>
       </div>
     )
   }

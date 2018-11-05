@@ -1,0 +1,15 @@
+#NavBar {
+  margin-top:5px;
+  margin-left:5px;
+  border:1px solid black;
+  padding-bottom:20px;
+  padding-top:15px;
+}
+
+#span {
+  margin-left:10px;
+}
+
+.span {
+  margin-left:25px;
+}
