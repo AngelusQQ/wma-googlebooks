@@ -39,7 +39,6 @@ export default {
         request.on('end', () => {
           console.log('No more data in response.');
           resolve('FINISH');
-          request.end();
         })
       });
       request.write(postData);
