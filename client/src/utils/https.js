@@ -39,7 +39,7 @@ export default {
         if(response.statusCode >= 200 && response.statusCode < 300) {
           let data = '';
           response.on('data', (chunk) => data += chunk );
-          response.on('end', () => resolve(data));
+          response.on('end', () => resolve(JSON.parse(data)));
         } else {
           reject(new Error(response.statusCode));
         }
