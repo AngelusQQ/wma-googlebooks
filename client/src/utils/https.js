@@ -9,20 +9,13 @@ const postOptions = {
           'Content-Type': 'application/x-www-form-urlencoded'
   }
 }
-//
-// const postData = querystring.stringify({
-//   "title": "Catcher in the Rye",
-//   "authors": "J. D. Salinger"
-// })
 
 export default {
   //GET REQUEST (Google Search - Books)
-  //https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes
   searchBooks: (parameters) => {
 
     const query = parameters.includes(" ") ? parameters.trim().split(" ").join("+")
     : parameters.trim();
-    console.log("SEARCH TERM:", query);
 
     const url = 'https://www.googleapis.com/books/v1/volumes?q=' + query;
     return new Promise((resolve, reject) => {
