@@ -33,17 +33,17 @@ export default {
   saveBook: () => {
     return new Promise((resolve, reject) => {
       const request = https.request(postOptions, (response) => {
+        let data;
         response.on('data', (chunk) => {
           console.log(`BODY: ${chunk}`);
+          data += chunk;
         });
         response.on('end', () => {
-          console.log('No more data in response.');
-          resolve('FINISH');
+          resolve(data);
         })
       });
       request.write(postData);
       request.end();
-      // resolve('SENSITIVE');
       request.on('error', (err) => reject(err));
     });
   }
