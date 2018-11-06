@@ -16,7 +16,7 @@ const Result = props => (
             <input className="none" type="text" value={volume.volumeInfo.authors} name="authors" />
             <input className="none" type="text" value={volume.volumeInfo.description} name="description" />
             <input className="none" type="text" value={foo} name="thumbnail" />
-            <input className="none" type="text" value={volume.volumeInfo.previewLink} name="previewLink" />
+            <input className="none" type="text" value={volume.volumeInfo.infoLink} name="previewLink" />
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
