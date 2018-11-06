@@ -5,8 +5,8 @@ const Result = props => (
   <div>
     <div className="container-title">Currently Showing {props.searchSize} Search Results:</div>
     {props.results !== "TEMP" ?
-    props.results.map(volume => (
-      <div className="container">
+    props.results.map(volume => {
+      return <div className="container">
         <span id="buttonOne" className="button">
           <form method="post" action="/api/books">
             <input className="none" type="text" value={volume.volumeInfo.title} name="title" />
@@ -29,7 +29,7 @@ const Result = props => (
           <h3 id="description" className="text">Description: {volume.volumeInfo.description || "No Description Provided"}</h3>
         </span>
       </div>
-    )) : <div className="empty-container"></div>}
+    }) : <div className="empty-container"></div>}
   </div>
 );
 
