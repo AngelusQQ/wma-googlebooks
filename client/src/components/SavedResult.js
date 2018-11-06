@@ -27,7 +27,3 @@ const SavedResult = props => (
 );
 
 export default SavedResult;
-
-// <span id="buttonTwo" className="button">
-//   <a href={volume.previewLink} target="blank">View</a>
-// </span>
