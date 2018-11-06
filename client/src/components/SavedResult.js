@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import "./SavedResult.css";
 
 function myFunc(url) {
-  var win = window.open(url, '_blank');
-  win.focus();
+  window.open(url, '_blank');
 }
 
 const SavedResult = props => (
