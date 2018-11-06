@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import "./Result.css";
 
-const myFunc = (url) => {
-  console.log("The Lord is GOod");
-  window.open(url, '_blank');
-}
-
 const Result = props => (
   <div>
     <div className="container-title">Currently Showing {props.searchSize} Search Results:</div>
@@ -26,7 +21,7 @@ const Result = props => (
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <button onClick={myFunc(volume.volumeInfo.previewLink)}>{volume.volumeInfo.previewLink}</button>
+          <a href={volume.previewLink} target="blank">View</a>
         </span>
         <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
         <h3 className="text">Author: {volume.volumeInfo.authors || "No Author Provided"}</h3>
