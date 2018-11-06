@@ -22,14 +22,15 @@
 
 .button {
   float:right;
+  margin-top:5px;
 }
 
 #buttonTwo {
-  margin-right:20px;
+  margin-right:15px;
 }
 
 #buttonOne {
-  margin-right:0px;
+  margin-right:5px;
 }
 
 .text {
