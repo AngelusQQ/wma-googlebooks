@@ -18,7 +18,7 @@ class SavedBooks extends Component {
 
   loadBooks = () => {
     API.getBooks('/api/books')
-      .then(response => console.log(response[0].title))
+      .then(response => this.setState({ books: response }))
       .catch((err) => console.log(err));
   };
 
