@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Books.css';
 import NavBar from '../components/NavBar';
 import Title from '../components/Title';
-import Result from '../components/Result';
+import SavedResult from '../components/SavedResult';
 import titleImage from '../images/title.png';
 import API from '../utils/https';
 
@@ -32,7 +32,7 @@ class SavedBooks extends Component {
     return (
       <div>
         <Title src={titleImage} />
-        <Result onChange={this.handleInputChange} searchSize={this.state.searchSize}
+        <SavedResult onChange={this.handleInputChange} searchSize={this.state.searchSize}
         results={this.state.books} name="searchSize"
         buttonOne="Delete Book" buttonTwo="View Book" request="/delete"/>
       </div>

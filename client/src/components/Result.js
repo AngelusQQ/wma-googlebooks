@@ -9,14 +9,14 @@ const Result = props => (
       <div className="container">
         <span id="buttonOne" className="button">
           <form method="post" action={props.request}>
-            <input className="none" type="text" value={volume.volumeInfo.title ? (volume.volumeInfo.title) : (volume.title)} name="title" />
-            <input className="none" type="text" value={volume.volumeInfo.authors || volume.authors} name="authors" />
-            <input className="none" type="text" value={volume.volumeInfo.description || volume.description} name="description" />
+            <input className="none" type="text" value={volume.volumeInfo.title} name="title" />
+            <input className="none" type="text" value={volume.volumeInfo.authors} name="authors" />
+            <input className="none" type="text" value={volume.volumeInfo.description} name="description" />
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <form action={volume.volumeInfo.previewLink || volume.previewLink || "No Preview Link"} target="blank">
+          <form action={volume.volumeInfo.previewLink || "No Preview Link"} target="blank">
             <input type="submit" value={props.buttonTwo} />
           </form>
         </span>
