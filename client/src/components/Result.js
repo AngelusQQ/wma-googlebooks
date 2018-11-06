@@ -22,9 +22,7 @@ const Result = props => (
         </span>
 
         <span id="buttonTwo" className="button">
-          <form method="get" action={volume.volumeInfo.infoLink}>
-            <input type="submit" value="View"/>
-          </form>
+          <a href={volume.volumeInfo.infoLink} target="blank"><button>View</button></a>
         </span>
 
         <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
