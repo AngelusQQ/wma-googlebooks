@@ -63,7 +63,7 @@ class Books extends Component {
         </form>
         <Result onChange={this.handleInputChange} searchSize={this.state.searchSize}
         results={this.state.books} name="searchSize"
-        buttonOne="Add to Saved Books" buttonTwo="View"/>
+        buttonOne="Add to Saved Books" buttonTwo="View" request="/"/>
       </div>
     )
   }

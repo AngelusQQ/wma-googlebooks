@@ -40,8 +40,7 @@ export default {
           let data = '';
           response.on('data', (chunk) => data += chunk );
           response.on('end', () => {
-            const realData = JSON.parse(data);
-            resolve(data);
+            resolve(JSON.parse(data));
           });
         } else {
           reject(new Error(response.statusCode));

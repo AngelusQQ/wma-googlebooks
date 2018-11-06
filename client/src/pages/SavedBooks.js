@@ -19,10 +19,7 @@ class SavedBooks extends Component {
 
   loadBooks = () => {
     API.getBooks('/api/books')
-      .then(response => {
-        this.setState({ fakeBooks: response });
-        console.log(this.state.fakeBooks);
-      })
+      .then(response => this.setState({ books: response }))
       .catch((err) => console.log(err));
   };
 
@@ -37,7 +34,7 @@ class SavedBooks extends Component {
         <Title src={titleImage} />
         <Result onChange={this.handleInputChange} searchSize={this.state.searchSize}
         results={this.state.books} name="searchSize"
-        buttonOne="Delete Book" buttonTwo="View Book" />
+        buttonOne="Delete Book" buttonTwo="View Book" request="/delete"/>
       </div>
     )
   }
