@@ -8,7 +8,7 @@ const Result = props => (
     props.results.map(volume => (
       <div className="container">
         <span id="buttonOne" className="button">
-          <form method="post" action={props.request}>
+          <form method="post" action="/">
             <input className="none" type="text" value={volume.volumeInfo.title} name="title" />
             <input className="none" type="text" value={volume.volumeInfo.authors} name="authors" />
             <input className="none" type="text" value={volume.volumeInfo.description} name="description" />
@@ -16,7 +16,7 @@ const Result = props => (
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <form action={volume.volumeInfo.previewLink || "No Preview Link"} target="blank">
+          <form action={volume.volumeInfo.previewLink || "No Preview Link"}>
             <input type="submit" value={props.buttonTwo} />
           </form>
         </span>

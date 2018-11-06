@@ -8,7 +8,7 @@ const SavedResult = props => (
     props.results.map(volume => (
       <div className="container">
         <span id="buttonOne" className="button">
-          <form method="post" action={props.request}>
+          <form method="post" action="/api/books">
             <input className="none" type="text" value={volume.title} name="title" />
             <input className="none" type="text" value={volume.authors} name="authors" />
             <input className="none" type="text" value={volume.description} name="description" />
@@ -16,7 +16,8 @@ const SavedResult = props => (
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <form action={volume.previewLink || "No Preview Link"} target="blank">
+          <form action="/api/books/delete" method="post">
+            <input className="none" type="text" value={volume._id} name="_id" />
             <input type="submit" value={props.buttonTwo} />
           </form>
         </span>
