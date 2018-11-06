@@ -50,12 +50,13 @@ export default {
     });
   },
   //POST REQUEST (adding a book to database)
-  saveBook: (title, authors, description, thumbnail) => {
+  saveBook: (title, authors, description, thumbnail, previewLink) => {
     const postData = querystring.stringify({
       "title": title || "No Title Provided",
       "authors": authors || "No Author Provided",
       "description": description || "No Description Provided",
-      "thumbnail": thumbnail || "No Thumbnail Provided"
+      "thumbnail": thumbnail || "No Thumbnail Provided",
+      "previewLink": previewLink || "No Preview Link Provided"
     });
 
     return new Promise((resolve, reject) => {
