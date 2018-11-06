@@ -12,9 +12,10 @@ const Result = props => (
       <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
       <h3 className="text">Author: {volume.volumeInfo.authors || "No Author Provided"}</h3>
       <div></div>
-      <span><img src={volume.volumeInfo.imageLinks.thumbnail} alt="Book" />
-      <h3 className="text">Description: {volume.volumeInfo.description || "No Description Provided"}</h3></span>
-
+      <span>
+        <div id="text"><img src={volume.volumeInfo.imageLinks.thumbnail} alt="Book" /></div>
+        <h3 className="text">Description: {volume.volumeInfo.description || "No Description Provided"}</h3>
+      </span>
     </div>
   )) : <div className="empty-container"></div>}
   </div>
