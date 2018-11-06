@@ -8,7 +8,7 @@ import API from '../utils/https';
 
 class SavedBooks extends Component {
   state = {
-    books: "TEMP",
+    books: 'TEMP',
     searchSize: 0
   };
 
