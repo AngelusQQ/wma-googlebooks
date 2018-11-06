@@ -8,17 +8,9 @@ const SavedResult = props => (
     props.results.map(volume => (
       <div className="container">
         <span id="buttonOne" className="button">
-          <form method="post" action="/api/books">
-            <input className="none" type="text" value={volume.title} name="title" />
-            <input className="none" type="text" value={volume.authors} name="authors" />
-            <input className="none" type="text" value={volume.description} name="description" />
-            <input type="submit" value={props.buttonOne} />
-          </form>
-        </span>
-        <span id="buttonTwo" className="button">
-          <form action="/api/books/delete" method="post">
+          <form method="post" action="/api/books/delete">
             <input className="none" type="text" value={volume._id} name="_id" />
-            <input type="submit" value={props.buttonTwo} />
+            <input type="submit" value={props.buttonOne} />
           </form>
         </span>
         <h1 className="text">{volume.title || "No Title Provided"}</h1>
