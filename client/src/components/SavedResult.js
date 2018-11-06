@@ -13,9 +13,7 @@ const SavedResult = props => (
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
-        <span id="buttonTwo" className="button">
-          <a href={volume.previewLink} target="blank">View</a>
-        </span>
+
         <h1 className="text">{volume.title || "No Title Provided"}</h1>
         <h3 className="text">Author: {volume.authors || "No Author Provided"}</h3>
         <div></div>
@@ -30,4 +28,6 @@ const SavedResult = props => (
 
 export default SavedResult;
 
-//
+// <span id="buttonTwo" className="button">
+//   <a href={volume.previewLink} target="blank">View</a>
+// </span>

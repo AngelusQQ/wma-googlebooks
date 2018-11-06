@@ -20,9 +20,7 @@ const Result = props => (
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
-        <span id="buttonTwo" className="button">
-          <a href={volume.previewLink} target="blank">View</a>
-        </span>
+
         <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
         <h3 className="text">Author: {volume.volumeInfo.authors || "No Author Provided"}</h3>
         <div></div>
@@ -36,3 +34,6 @@ const Result = props => (
 );
 
 export default Result;
+// <span id="buttonTwo" className="button">
+//   <a href={volume.previewLink} target="blank">View</a>
+// </span>
