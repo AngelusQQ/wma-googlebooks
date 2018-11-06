@@ -7,7 +7,7 @@ const Result = props => (
     {props.results !== "TEMP" ?
     props.results.map(volume => {
       let foo = '';
-      if(!volume.volumeInfo.imageLinks && volume.volume.info.imageLinks.length < 1) { foo = 'https://cdn2.iconfinder.com/data/icons/smiley-emoji/512/2.png'; }
+      if(!volume.volumeInfo.imageLinks && volume.volumeInfo.imageLinks.length < 1) { foo = 'https://cdn2.iconfinder.com/data/icons/smiley-emoji/512/2.png'; }
       else { foo = volume.volumeInfo.imageLinks.thumbnail; }
       return <div className="container">
         <span id="buttonOne" className="button">
