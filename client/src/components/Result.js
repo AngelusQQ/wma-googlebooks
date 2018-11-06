@@ -20,7 +20,13 @@ const Result = props => (
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
-        <a id="buttonTwo" className="button" href={volume.volumeInfo.infoLink} target="blank">View</a>
+
+        <span id="buttonTwo" className="button">
+          <form method="get" action={volume.volumeInfo.infoLink}>
+            <input type="submit" value="View"/>
+          </form>
+        </span>
+
         <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
         <h3 className="text">Author: {volume.volumeInfo.authors || "No Author Provided"}</h3>
         <div></div>
@@ -34,3 +40,4 @@ const Result = props => (
 );
 
 export default Result;
+// <a id="buttonTwo" className="button" href={volume.volumeInfo.infoLink} target="blank">View</a>
