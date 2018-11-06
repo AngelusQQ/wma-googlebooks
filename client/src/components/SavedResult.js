@@ -18,7 +18,7 @@ const SavedResult = props => (
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <button onClick={myFunc(volume.volumeInfo.previewLink)}></button>
+          <button onClick={myFunc(volume.volumeInfo.previewLink)}>{volume.volumeInfo.previewLink}</button>
         </span>
         <h1 className="text">{volume.title || "No Title Provided"}</h1>
         <h3 className="text">Author: {volume.authors || "No Author Provided"}</h3>

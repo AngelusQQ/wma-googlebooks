@@ -24,7 +24,7 @@ const Result = props => (
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <button onClick={myFunc(volume.volumeInfo.previewLink)}></button>
+          <button onClick={myFunc(volume.volumeInfo.previewLink)}>{volume.volumeInfo.previewLink}</button>
         </span>
         <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
         <h3 className="text">Author: {volume.volumeInfo.authors || "No Author Provided"}</h3>
