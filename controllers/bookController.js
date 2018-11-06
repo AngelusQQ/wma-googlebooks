@@ -21,7 +21,7 @@ module.exports = {
     console.log(req.body);
     database.Book.findById({ _id: req.body._id})
     .then(dbModel => dbModel.remove())
-    .then(dbModel => res.json(dbModel))
+    .then(dbModel => res.redirect('/saved'))
     .catch(err => res.status(422).json(err));
   }
 };

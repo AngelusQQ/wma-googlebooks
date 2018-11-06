@@ -12,12 +12,13 @@ const Result = props => (
             <input className="none" type="text" value={volume.volumeInfo.title} name="title" />
             <input className="none" type="text" value={volume.volumeInfo.authors} name="authors" />
             <input className="none" type="text" value={volume.volumeInfo.description} name="description" />
+            <input className="none" type="text" value={volume.volumeInfo.imageLinks.thumbnail} name="thumbnail" />
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <form action={volume.volumeInfo.previewLink}>
-            <input type="submit" value={props.buttonTwo} />
+          <form action={volume.volumeInfo.previewLink} method="get">
+            <input type="submit" value={props.buttonTwo} target="blank" />
           </form>
         </span>
         <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
