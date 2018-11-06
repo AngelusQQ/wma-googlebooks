@@ -7,7 +7,11 @@ const Result = props => (
   {props.results !== "TEMP" ?
   props.results.map(volume => (
     <div className="container">
-      <span id="buttonOne" className="button"><a href={volume.volumeInfo.previewLink} target="blank"><button>{props.buttonOne}</button></a></span>
+      <span id="buttonOne" className="button">
+        <form action={volume.volumeInfo.previewLink}>
+          <input type="submit" value={props.buttonOne} />
+        </form>
+      </span>
       <span id="buttonTwo" className="button"><button>{props.buttonTwo}</button></span>
       <h1 className="text">{volume.volumeInfo.title || "No Title Provided"}</h1>
       <h3 className="text">Author: {volume.volumeInfo.authors || "No Author Provided"}</h3>
