@@ -17,7 +17,7 @@ const SavedResult = props => (
         <h3 className="text">Author: {volume.authors || "No Author Provided"}</h3>
         <div></div>
         <span>
-          <div id="text"><img src={volume.imageLinks.thumbnail} alt="Book" /></div>
+          <div id="text"><img src={volume.thumbnail} alt="Book" /></div>
           <h3 id="description" className="text">Description: {volume.description || "No Description Provided"}</h3>
         </span>
       </div>
