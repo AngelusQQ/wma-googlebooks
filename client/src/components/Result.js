@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "./Result.css";
 
-function myFunc(url) {
+const myFunc = (url) => {
+  console.log("The Lord is GOod");
   window.open(url, '_blank');
 }
 
