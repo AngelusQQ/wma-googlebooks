@@ -16,7 +16,7 @@ const Result = props => (
           </form>
         </span>
         <span id="buttonTwo" className="button">
-          <form action={volume.volumeInfo.previewLink || "No Preview Link"}>
+          <form action={volume.volumeInfo.previewLink}>
             <input type="submit" value={props.buttonTwo} />
           </form>
         </span>

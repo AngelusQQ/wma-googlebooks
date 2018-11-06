@@ -9,7 +9,7 @@ module.exports = {
   create: function(req, res) {
     console.log(req.body);
     database.Book.create(req.body)
-    .then(dbModel => res.send(dbModel))
+    .then(dbModel => res.redirect('/saved'))
     .catch(err => res.status(422).json(err))
   },
   update: function(req, res) {
@@ -18,6 +18,7 @@ module.exports = {
     .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
+    console.log(req.body);
     database.Book.findById({ _id: req.params.id })
     .then(dbModel => dbModel.remove())
     .then(dbModel => res.json(dbModel))
