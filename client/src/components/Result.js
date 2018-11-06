@@ -9,9 +9,9 @@ const Result = props => (
       <div className="container">
         <span id="buttonOne" className="button">
           <form method="post" action="/">
-            <input type="text" value={volume.volumeInfo.title} name="title" />
-            <input type="text" value={volume.volumeInfo.authors} name="authors" />
-            <input type="text" value={volume.volumeInfo.description} name="description" />
+            <input className="none" type="text" value={volume.volumeInfo.title} name="title" />
+            <input className="none" type="text" value={volume.volumeInfo.authors} name="authors" />
+            <input className="none" type="text" value={volume.volumeInfo.description} name="description" />
             <input type="submit" value={props.buttonOne} />
           </form>
         </span>
