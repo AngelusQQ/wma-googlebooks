@@ -13,7 +13,7 @@ class SavedBooks extends Component {
   };
 
   componentDidMount() {
-    // this.loadBooks();
+    this.loadBooks();
   }
 
   loadBooks = () => {
@@ -35,7 +35,7 @@ class SavedBooks extends Component {
         <Title src={titleImage} />
         <Result onChange={this.handleInputChange} searchSize={this.state.searchSize}
         results={this.state.books} name="searchSize"
-        buttonOne="View Book" buttonTwo="Delete Book" />
+        buttonOne="Delete Book" buttonTwo="View Book" />
       </div>
     )
   }

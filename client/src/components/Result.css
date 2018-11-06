@@ -41,3 +41,7 @@
 #text {
   float:left;
 }
+
+#description {
+  margin-left:5px;
+}
