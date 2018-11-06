@@ -56,13 +56,14 @@ class Books extends Component {
   render() {
     return (
       <div>
-        {NavBar()}
         <Title src={titleImage} />
         <form>
           <input id="searchbar" value={this.state.search} onChange={this.handleInputChange} name="search"></input>
           <button id="submitButton" disabled={!(this.state.search)} onClick={this.submitSearch}>Search</button>
         </form>
-        <Result onChange={this.handleInputChange} searchSize={this.state.searchSize} results={this.state.books} name="searchSize"/>
+        <Result onChange={this.handleInputChange} searchSize={this.state.searchSize}
+        results={this.state.books} name="searchSize"
+        buttonOne="Add to Saved Books" buttonTwo="View"/>
       </div>
     )
   }
